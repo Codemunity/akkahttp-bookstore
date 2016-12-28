@@ -4,7 +4,7 @@
 		module="akkahttpbookstore_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161206121743"
+		publication="20161225154005"
 	>
 		<description>
 		AkkaHTTPBookstore

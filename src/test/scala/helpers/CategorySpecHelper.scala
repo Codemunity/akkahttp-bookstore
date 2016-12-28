@@ -1,8 +1,6 @@
 package helpers
 
-import akka.http.scaladsl.testkit.RouteTest
 import models.Category
-import org.scalatest._
 import repository.CategoryRepository
 
 import scala.concurrent.{ExecutionContext, Future}

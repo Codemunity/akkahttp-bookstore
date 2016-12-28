@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161213165533"/>
+		date="20161226104351"/>
 	<dependencies>
 		<module organisation="org.flywaydb" name="flyway-core">
 			<revision name="3.2.1" status="release" pubdate="20150320085300" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="28">

@@ -4,7 +4,7 @@
 		module="akkahttpbookstore$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161213165533"
+		publication="20161226104351"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
