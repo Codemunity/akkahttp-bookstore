@@ -27,8 +27,9 @@ class BookRepository (val databaseService: DatabaseService)(implicit executor: E
         bookSearch.releaseDate.map(book.releaseDate === _),
         bookSearch.categoryId.map(book.categoryId === _),
         bookSearch.author.map(a => book.author like s"%$a%")
-      ).collect({case Some(criteria) => criteria}).reduceLeftOption(_ || _).getOrElse(true: Rep[Boolean])
+      ).collect({case Some(criteria) => criteria}).reduceLeftOption(_ && _).getOrElse(true: Rep[Boolean])
     }
+
     db.run(query.result)
   }
 
