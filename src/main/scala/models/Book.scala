@@ -40,4 +40,5 @@ trait BookTable {
 
 
   protected val books = TableQuery[Books]
+
 }

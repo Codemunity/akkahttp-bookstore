@@ -1,11 +1,11 @@
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.testkit.ScalatestRouteTest
+import controllers.CategoryController
+import helpers.CategorySpecHelper
 import models.{Category, CategoryJson}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.CategoryRepository
 import services.{ConfigService, FlywayService, PostgresService}
-import controllers.CategoryController
-import helpers.CategorySpecHelper
 
 class CategoryEndpointSpec extends AsyncWordSpec
   with MustMatchers

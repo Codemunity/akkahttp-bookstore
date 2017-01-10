@@ -20,7 +20,7 @@ class CategoryRepositorySpec extends AsyncWordSpec
     We need to make sure it exists before all our tests are ran,
     and we also need to make sure our schema is destroyed after all tests are ran,
      because we need to always start from a clean slate.
-   */
+   */`
   val flywayService = new FlywayService(jdbcUrl, dbUser, dbPassword)
 
   // We need a service that provides us access to our database

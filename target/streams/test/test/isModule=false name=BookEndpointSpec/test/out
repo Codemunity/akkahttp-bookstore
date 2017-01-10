@@ -1,0 +1,34 @@
+[0m[[0minfo[0m] [0m[32mBookEndpointSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA Book Endpoint[0m[0m
+[0m[[0minfo[0m] [0m[31m- must return all books when no query parameters are sent *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  500 Internal Server Error was not equal to 200 OK (BookEndpointSpec.scala:57)[0m[0m
+[0m[[0minfo[0m] [0m[31m- must create a book *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "categories" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 13[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:366)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:507)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:504)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- must return NotFound when we try to delete a non existent category *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  500 Internal Server Error was not equal to 404 Not Found (BookEndpointSpec.scala:87)[0m[0m
+[0m[[0minfo[0m] [0m[31m- must return NoContent when we delete an existent category *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "categories" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 13[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:366)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:507)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:504)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m

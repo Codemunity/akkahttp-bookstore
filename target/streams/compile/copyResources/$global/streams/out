@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/src/main/resources/application.conf,/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/src/main/resources/db,/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/scala-2.11/classes/db)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/src/main/resources/db/migration,/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/scala-2.11/classes/db/migration)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/src/main/resources/db/migration/V1__Create_categories_table.sql,/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/scala-2.11/classes/db/migration/V1__Create_categories_table.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/src/main/resources/db/migration/V2__Create_books_table.sql,/Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/scala-2.11/classes/db/migration/V2__Create_books_table.sql)[0m

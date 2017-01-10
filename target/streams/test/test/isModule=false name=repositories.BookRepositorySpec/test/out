@@ -1,0 +1,72 @@
+[0m[[0minfo[0m] [0m[32mBookRepositorySpec:[0m[0m
+[0m[[0minfo[0m] [0m[32mA BookRepository[0m[0m
+[0m[[0minfo[0m] [0m[31m- must be empty at the beginning *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "books" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 80[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:413)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.results(StatementInvoker.scala:39)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.iteratorTo(StatementInvoker.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.Invoker$class.foreach(Invoker.scala:48)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.foreach(StatementInvoker.scala:16)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- must create valid books *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "categories" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 13[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:366)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:507)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:504)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- must not find a non-existent book *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "books" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 80[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:413)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.results(StatementInvoker.scala:39)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.iteratorTo(StatementInvoker.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.Invoker$class.foreach(Invoker.scala:48)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.StatementInvoker.foreach(StatementInvoker.scala:16)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- must find an existing book *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "categories" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 13[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:366)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:507)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:504)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- must delete a book by id if it exists *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.postgresql.util.PSQLException: ERROR: relation "categories" does not exist[0m[0m
+[0m[[0minfo[0m] [0m[31m  Position: 13[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2270)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1998)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:570)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:420)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:366)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:507)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.driver.JdbcActionComponent$InsertActionComposerImpl$SingleInsertAction$$anonfun$run$7.apply(JdbcActionComponent.scala:504)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$SessionDef$class.withPreparedInsertStatement(JdbcBackend.scala:354)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at slick.jdbc.JdbcBackend$BaseSession.withPreparedInsertStatement(JdbcBackend.scala:407)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m

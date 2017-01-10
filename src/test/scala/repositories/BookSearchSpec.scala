@@ -35,41 +35,15 @@ class BookSearchSpec extends AsyncWordSpec
   // Our class for book-related helper methods
   val bookSpecHelper = new BookSpecHelper(categoryRepository)(bookRepository)
 
-  val sciFiCategory = Category(None, "Sci-Fi")
-  val techCategory = Category(None, "Technical")
-
-  val bookFields = List(
-    ("Akka in Action", techCategory.title, Date.valueOf("2016-09-01"), "Raymond Roestenburg, Rob Bakker, and Rob Williams"),
-    ("Scala in Depth", techCategory.title, Date.valueOf("2012-01-01"), "Joshua D. Suereth"),
-    ("Code Complete", techCategory.title, Date.valueOf("1993-01-01"), "Steve McConnell"),
-    ("The Time Machine", sciFiCategory.title, Date.valueOf("1895-01-01"), "H.G. Wells"),
-    ("The Invisible Man", sciFiCategory.title, Date.valueOf("1897-01-01"), "H.G. Wells"),
-    ("Nineteen Eighty-Four", sciFiCategory.title, Date.valueOf("1949-01-01"), "George Orwell")
-  )
-
   override def beforeAll {
     // Let's make sure our schema is created
     flywayService.migrateDatabase
 
-    for {
-      s <- categoryRepository.create(sciFiCategory)
-      t <- categoryRepository.create(techCategory)
-      b <- Future.sequence(bookFields.map { bookField =>
-        // Get the respective category id
-        val cId = if (bookField._2 == sciFiCategory.title) s.id.get else t.id.get
-        val book = bookSpecHelper.book(cId, bookField._1, bookField._3, bookField._4)
-        bookRepository.create(book)
-      })
-    } yield b
+    bookSpecHelper.bulkInsert
   }
 
   override def afterAll {
-    for {
-      books <- bookRepository.all
-      _ <- Future.sequence(books.map(b => bookRepository.delete(b.id.get)))
-      _ <- categoryRepository.delete(sciFiCategory.id.get)
-      _ <- categoryRepository.delete(techCategory.id.get)
-    } yield books
+    bookSpecHelper.bulkDelete
 
     // Let's make sure our schema is dropped
     flywayService.dropDatabase
@@ -88,7 +62,7 @@ class BookSearchSpec extends AsyncWordSpec
       val bookSearch = BookSearch(title = Some("Akka"))
       bookRepository.search(bookSearch).map { books =>
         books.size mustBe 1
-        books.head.title mustBe bookFields.head._1
+        books.head.title mustBe bookSpecHelper.bookFields.head._1
       }
 
       val bookSearchMultiple = BookSearch(title = Some("The"))
@@ -101,13 +75,13 @@ class BookSearchSpec extends AsyncWordSpec
       val bookSearch = BookSearch(releaseDate = Some(Date.valueOf("1993-01-01")))
       bookRepository.search(bookSearch).map { books =>
         books.size mustBe 1
-        books.head.title mustBe bookFields(2)._1
+        books.head.title mustBe bookSpecHelper.bookFields(2)._1
       }
     }
 
     "return the books by category" in {
       for {
-        Some(category) <- categoryRepository.findByTitle(sciFiCategory.title)
+        Some(category) <- categoryRepository.findByTitle(bookSpecHelper.sciFiCategory.title)
         books <- bookRepository.search(BookSearch(categoryId = category.id))
       } yield books.size mustBe 3
     }
@@ -121,7 +95,7 @@ class BookSearchSpec extends AsyncWordSpec
 
     "return correctly the expect books when combining searches" in {
       for {
-        Some(category) <- categoryRepository.findByTitle(sciFiCategory.title)
+        Some(category) <- categoryRepository.findByTitle(bookSpecHelper.sciFiCategory.title)
         books <- bookRepository.search(BookSearch(categoryId = category.id, title = Some("Scala")))
       } yield books.size mustBe 0
 
