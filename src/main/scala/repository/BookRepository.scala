@@ -17,6 +17,13 @@ class BookRepository (val databaseService: DatabaseService)(implicit executor: E
   // We add the book to our existing table query
   def create(book: Book): Future[Book] = db.run(books returning books += book)
 
+  def bulkCreate(bookSeq: Seq[Book]): Future[Seq[Book]] = {
+    println("Bulk Creating")
+    val res = db.run(books returning books ++= bookSeq)
+    println("Bulk Creating Done")
+    res
+  }
+
   // Here we just filter our table query by id
   def findById(id: Long): Future[Option[Book]] = db.run(books.filter(_.id === id).result.headOption)
 
@@ -35,4 +42,6 @@ class BookRepository (val databaseService: DatabaseService)(implicit executor: E
 
   // Here we find the respective book and then we delete it
   def delete(id: Long): Future[Int] = db.run(books.filter(_.id === id).delete)
+
+  def close = db.close()
 }

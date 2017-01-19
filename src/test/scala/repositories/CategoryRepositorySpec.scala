@@ -38,6 +38,7 @@ class CategoryRepositorySpec extends AsyncWordSpec
   }
 
   override def afterAll {
+    categoryRepository.close
     // Let's make sure our schema is dropped
     flywayService.dropDatabase
   }

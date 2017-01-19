@@ -3,6 +3,7 @@ package helpers
 import java.sql.Date
 
 import models.{Book, Category}
+import org.scalatest._
 import repository.{BookRepository, CategoryRepository}
 
 import scala.concurrent.{ExecutionContext, Future}
@@ -24,15 +25,15 @@ class BookSpecHelper(categoryRepository: CategoryRepository)(bookRepository: Boo
     ("Nineteen Eighty-Four", sciFiCategory.title, Date.valueOf("1949-01-01"), "George Orwell")
   )
 
-  def bulkInsert = {
+  def bulkInsert: Future[Seq[Book]] = {
     for {
       s <- categoryRepository.create(sciFiCategory)
       t <- categoryRepository.create(techCategory)
-      b <- Future.sequence(bookFields.map { bookField =>
+      b <- bookRepository.bulkCreate(bookFields.map { bookField =>
+        println("Mapping books")
         // Get the respective category id
         val cId = if (bookField._2 == sciFiCategory.title) s.id.get else t.id.get
-        val b = book(cId, bookField._1, bookField._3, bookField._4)
-        bookRepository.create(b)
+        book(cId, bookField._1, bookField._3, bookField._4)
       })
     } yield b
   }
@@ -41,9 +42,18 @@ class BookSpecHelper(categoryRepository: CategoryRepository)(bookRepository: Boo
     for {
       books <- bookRepository.all
       _ <- Future.sequence(books.map(b => bookRepository.delete(b.id.get)))
-      _ <- categoryRepository.delete(sciFiCategory.id.get)
-      _ <- categoryRepository.delete(techCategory.id.get)
+      Some(sciFi) <- categoryRepository.findByTitle(sciFiCategory.title)
+      Some(tech) <- categoryRepository.findByTitle(techCategory.title)
+      _ <- categoryRepository.delete(sciFi.id.get)
+      _ <- categoryRepository.delete(tech.id.get)
     } yield books
+  }
+
+  def bulkInsertAndDelete(assertion: Seq[Book] => Future[Assertion]): Future[Assertion] = {
+    bulkInsert.flatMap { books =>
+      val a = assertion(books)
+      bulkDelete.flatMap(_ => a)
+    }
   }
 
   def book(categoryId: Long, title: String = "Murder in Ganymede", releaseDate: Date = Date.valueOf("1998-01-20"), author: String = "John Doe") =
