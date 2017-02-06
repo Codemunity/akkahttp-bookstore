@@ -42,7 +42,10 @@ class BookEndpointSpec extends AsyncWordSpec
   }
 
   override def afterAll {
-    bookSpecHelper.bulkDelete
+    bookSpecHelper.bulkDelete.map { _ =>
+      categoryRepository.close
+      bookRepository.close
+    }
 
     // Let's make sure our schema is dropped
     flywayService.dropDatabase
