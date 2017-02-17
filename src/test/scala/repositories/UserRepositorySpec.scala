@@ -6,7 +6,7 @@ import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.UserRepository
 import services.{ConfigService, FlywayService, PostgresService}
 import scala.concurrent.ExecutionContext.Implicits.global
-
+import com.github.t3hnar.bcrypt._
 
 class UserRepositorySpec extends AsyncWordSpec
   with MustMatchers
@@ -45,6 +45,23 @@ class UserRepositorySpec extends AsyncWordSpec
         _ <- userRepository.delete(u.id.get)
       } yield {
         u.id mustBe defined
+        // Let's make sure that the store `u.password`,
+        // is the hashed version of the original `user.password`
+        user.password.isBcrypted(u.password) mustBe true
+      }
+    }
+
+    "not find a category by email if it doesn't exist" in {
+      userRepository.findByEmail("test@test.com") map { c => c must not be defined }
+    }
+
+    "find a user by email if it exists" in {
+      for {
+        u <- userRepository.create(user)
+        Some(foundUser) <- userRepository.findByEmail(u.email)
+        _ <- userRepository.delete(u.id.get)
+      } yield {
+        u.id mustBe foundUser.id
       }
     }
 

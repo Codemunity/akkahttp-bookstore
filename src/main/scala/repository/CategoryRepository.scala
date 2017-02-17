@@ -21,6 +21,4 @@ class CategoryRepository (val databaseService: DatabaseService)(implicit executo
 
   // Here we find the respective category and then we delete it
   def delete(id: Long): Future[Int] = db.run(categories.filter(_.id === id).delete)
-
-  def close = db.close()
 }

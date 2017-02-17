@@ -42,6 +42,4 @@ class BookRepository (val databaseService: DatabaseService)(implicit executor: E
 
   // Here we find the respective book and then we delete it
   def delete(id: Long): Future[Int] = db.run(books.filter(_.id === id).delete)
-
-  def close = db.close()
 }

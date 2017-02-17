@@ -4,7 +4,7 @@
 		module="akkahttpbookstore_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20170201194730"
+		publication="20170210125334"
 	>
 		<description>
 		AkkaHTTPBookstore
@@ -46,5 +46,6 @@
 		<dependency org="com.typesafe.slick" name="slick-hikaricp_2.11" rev="3.1.1" conf="compile->default(compile)"/>
 		<dependency org="org.slf4j" name="slf4j-nop" rev="1.6.4" conf="compile->default(compile)"/>
 		<dependency org="org.flywaydb" name="flyway-core" rev="3.2.1" conf="compile->default(compile)"/>
+		<dependency org="com.github.t3hnar" name="scala-bcrypt_2.11" rev="3.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
