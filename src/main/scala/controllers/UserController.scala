@@ -8,7 +8,8 @@ import repository.{CategoryRepository, UserRepository}
 class UserController(val userRepository: UserRepository) extends UserJson {
 
   val routes = pathPrefix("users") {
-    pathEndOrSingleSlash {post {
+    pathEndOrSingleSlash {
+      post {
           decodeRequest {
             entity(as[User]) { user =>
               onSuccess(userRepository.findByEmail(user.email)) {

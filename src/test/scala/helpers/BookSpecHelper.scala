@@ -30,7 +30,6 @@ class BookSpecHelper(categoryRepository: CategoryRepository)(bookRepository: Boo
       s <- categoryRepository.create(sciFiCategory)
       t <- categoryRepository.create(techCategory)
       b <- bookRepository.bulkCreate(bookFields.map { bookField =>
-        println("Mapping books")
         // Get the respective category id
         val cId = if (bookField._2 == sciFiCategory.title) s.id.get else t.id.get
         book(cId, bookField._1, bookField._3, bookField._4)
