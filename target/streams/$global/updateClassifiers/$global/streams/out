@@ -8,7 +8,7 @@
 [debug] == resolving dependencies for default#akkahttpbookstore$sources_2.11;1.0 [compile]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@67b94b0b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4e4fe199
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.8
 [debug] 	found org.scala-lang#scala-library;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-library;2.11.8
@@ -17,7 +17,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang#scala-library;2.11.8 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-stream_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1135a9d6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@609d0aab
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-stream_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-stream_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.7 [compile->runtime]
@@ -25,7 +25,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-actor_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4cf5f37b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@53e2aa7e
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-actor_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-actor_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.7 [compile->runtime]
@@ -33,7 +33,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-actor_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->default(compile)]
 [info] Resolving com.typesafe#config;1.3.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@a245777
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@305e68b6
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.3.0
 [debug] 	found com.typesafe#config;1.3.0 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->runtime]
@@ -41,7 +41,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#config;1.3.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@16552fd7
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6ce9441a
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-java8-compat_2.11;0.7.0
 [debug] 	found org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->runtime]
@@ -49,7 +49,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-java8-compat_2.11;0.7.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe#ssl-config-akka_2.11;0.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@17f54d80
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6428126b
 [debug] sbt-chain: module revision found in cache: com.typesafe#ssl-config-akka_2.11;0.2.1
 [debug] 	found com.typesafe#ssl-config-akka_2.11;0.2.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->runtime]
@@ -57,7 +57,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-akka_2.11;0.2.1 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->default(compile)]
 [info] Resolving com.typesafe#ssl-config-core_2.11;0.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3a0fb94c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@57d7be63
 [debug] sbt-chain: module revision found in cache: com.typesafe#ssl-config-core_2.11;0.2.1
 [debug] 	found com.typesafe#ssl-config-core_2.11;0.2.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->runtime]
@@ -65,7 +65,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe#ssl-config-core_2.11;0.2.1 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@452a3b27
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1580ea2d
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4
 [debug] 	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->runtime]
@@ -73,7 +73,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->default(compile)]
 [info] Resolving org.reactivestreams#reactive-streams;1.0.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@570ae599
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6682f0dd
 [debug] sbt-chain: module revision found in cache: org.reactivestreams#reactive-streams;1.0.0
 [debug] 	found org.reactivestreams#reactive-streams;1.0.0 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->runtime]
@@ -81,7 +81,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.reactivestreams#reactive-streams;1.0.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-core_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1aef951c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@ef11631
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-core_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-http-core_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.7 [compile->runtime]
@@ -89,7 +89,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-core_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-parsing_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@49ea5cdb
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@72417a5
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-parsing_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-parsing_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.7 [compile->runtime]
@@ -97,7 +97,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-parsing_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-experimental_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@166a21e9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@76aa84e5
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-experimental_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-http-experimental_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.7 [compile->runtime]
@@ -105,7 +105,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-experimental_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4ab92ea6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6b1ee8ac
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7
 [debug] 	found com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7 [compile->runtime]
@@ -113,7 +113,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-spray-json-experimental_2.11;2.4.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->default(compile)]
 [info] Resolving io.spray#spray-json_2.11;1.3.2 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@51e75cd7
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@43c4c2a4
 [debug] sbt-chain: module revision found in cache: io.spray#spray-json_2.11;1.3.2
 [debug] 	found io.spray#spray-json_2.11;1.3.2 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->runtime]
@@ -121,7 +121,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->io.spray#spray-json_2.11;1.3.2 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-testkit_2.11;2.4.3 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-http-testkit_2.11;2.4.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5713070c
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@c627387
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-http-testkit_2.11;2.4.3
 [debug] 	found com.typesafe.akka#akka-http-testkit_2.11;2.4.3 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-testkit_2.11;2.4.3 [compile->runtime]
@@ -129,7 +129,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-http-testkit_2.11;2.4.3 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream-testkit_2.11;2.4.3 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-stream-testkit_2.11;2.4.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@41019704
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@68faede1
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-stream-testkit_2.11;2.4.3
 [debug] 	found com.typesafe.akka#akka-stream-testkit_2.11;2.4.3 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream-testkit_2.11;2.4.3 [compile->runtime]
@@ -137,7 +137,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-stream-testkit_2.11;2.4.3 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.3 [compile->default(compile)]
 [info] Resolving com.typesafe.akka#akka-testkit_2.11;2.4.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7031b613
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@14e3842a
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2.4.3
 [debug] 	found com.typesafe.akka#akka-testkit_2.11;2.4.3 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.3 [compile->runtime]
@@ -145,7 +145,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.akka#akka-testkit_2.11;2.4.3 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.pauldijou#jwt-core_2.11;0.8.0 [compile->default(compile)]
 [info] Resolving com.pauldijou#jwt-core_2.11;0.8.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@792140a
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6c5c90e2
 [debug] sbt-chain: module revision found in cache: com.pauldijou#jwt-core_2.11;0.8.0
 [debug] 	found com.pauldijou#jwt-core_2.11;0.8.0 in sbt-chain
 [debug] 	[0.8.0] com.pauldijou#jwt-core_2.11;0.8.0
@@ -154,7 +154,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.pauldijou#jwt-core_2.11;0.8.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.pauldijou#jwt-core-impl_2.11;0.8.0 [compile->default(compile)]
 [info] Resolving com.pauldijou#jwt-core-impl_2.11;0.8.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6e9df9ab
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@74f48d9b
 [debug] sbt-chain: module revision found in cache: com.pauldijou#jwt-core-impl_2.11;0.8.0
 [debug] 	found com.pauldijou#jwt-core-impl_2.11;0.8.0 in sbt-chain
 [debug] 	[0.8.0] com.pauldijou#jwt-core-impl_2.11;0.8.0
@@ -163,7 +163,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.pauldijou#jwt-core-impl_2.11;0.8.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcpkix-jdk15on;1.52 [compile->default(compile)]
 [info] Resolving org.bouncycastle#bcpkix-jdk15on;1.52 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4790f880
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2ddf38aa
 [debug] sbt-chain: module revision found in cache: org.bouncycastle#bcpkix-jdk15on;1.52
 [debug] 	found org.bouncycastle#bcpkix-jdk15on;1.52 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcpkix-jdk15on;1.52 [compile->runtime]
@@ -171,7 +171,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcpkix-jdk15on;1.52 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcprov-jdk15on;1.52 [compile->default(compile)]
 [info] Resolving org.bouncycastle#bcprov-jdk15on;1.52 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ea01423
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@16cfc72c
 [debug] sbt-chain: module revision found in cache: org.bouncycastle#bcprov-jdk15on;1.52
 [debug] 	found org.bouncycastle#bcprov-jdk15on;1.52 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcprov-jdk15on;1.52 [compile->runtime]
@@ -179,7 +179,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.bouncycastle#bcprov-jdk15on;1.52 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick_2.11;3.1.1 [compile->default(compile)]
 [info] Resolving com.typesafe.slick#slick_2.11;3.1.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@789b9bae
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4eb586c6
 [debug] sbt-chain: module revision found in cache: com.typesafe.slick#slick_2.11;3.1.1
 [debug] 	found com.typesafe.slick#slick_2.11;3.1.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick_2.11;3.1.1 [compile->runtime]
@@ -187,7 +187,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick_2.11;3.1.1 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.10 [compile->default(compile)]
 [info] Resolving org.slf4j#slf4j-api;1.7.10 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7272f2c9
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3880fe8f
 [debug] sbt-chain: module revision found in cache: org.slf4j#slf4j-api;1.7.10
 [debug] 	found org.slf4j#slf4j-api;1.7.10 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.10 [compile->runtime]
@@ -195,7 +195,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-api;1.7.10 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->default(compile)]
 [info] Resolving org.postgresql#postgresql;9.4-1201-jdbc41 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@32898624
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6839433f
 [debug] sbt-chain: module revision found in cache: org.postgresql#postgresql;9.4-1201-jdbc41
 [debug] 	found org.postgresql#postgresql;9.4-1201-jdbc41 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->runtime]
@@ -203,7 +203,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.postgresql#postgresql;9.4-1201-jdbc41 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick-hikaricp_2.11;3.1.1 [compile->default(compile)]
 [info] Resolving com.typesafe.slick#slick-hikaricp_2.11;3.1.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1f464f20
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@371034c1
 [debug] sbt-chain: module revision found in cache: com.typesafe.slick#slick-hikaricp_2.11;3.1.1
 [debug] 	found com.typesafe.slick#slick-hikaricp_2.11;3.1.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick-hikaricp_2.11;3.1.1 [compile->runtime]
@@ -211,7 +211,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.typesafe.slick#slick-hikaricp_2.11;3.1.1 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.zaxxer#HikariCP-java6;2.3.7 [compile->default(compile)]
 [info] Resolving com.zaxxer#HikariCP-java6;2.3.7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f03658f
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@10046d09
 [debug] sbt-chain: module revision found in cache: com.zaxxer#HikariCP-java6;2.3.7
 [debug] 	found com.zaxxer#HikariCP-java6;2.3.7 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.zaxxer#HikariCP-java6;2.3.7 [compile->runtime]
@@ -219,7 +219,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.zaxxer#HikariCP-java6;2.3.7 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.javassist#javassist;3.19.0-GA [compile->default(compile)]
 [info] Resolving org.javassist#javassist;3.19.0-GA ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2f40661b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@8b15711
 [debug] sbt-chain: module revision found in cache: org.javassist#javassist;3.19.0-GA
 [debug] 	found org.javassist#javassist;3.19.0-GA in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.javassist#javassist;3.19.0-GA [compile->runtime]
@@ -227,7 +227,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.javassist#javassist;3.19.0-GA [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-nop;1.6.4 [compile->default(compile)]
 [info] Resolving org.slf4j#slf4j-nop;1.6.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@48815417
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4f4ce8b
 [debug] sbt-chain: module revision found in cache: org.slf4j#slf4j-nop;1.6.4
 [debug] 	found org.slf4j#slf4j-nop;1.6.4 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-nop;1.6.4 [compile->runtime]
@@ -235,7 +235,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.slf4j#slf4j-nop;1.6.4 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.flywaydb#flyway-core;3.2.1 [compile->default(compile)]
 [info] Resolving org.flywaydb#flyway-core;3.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@61c7f201
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6e346a3b
 [debug] sbt-chain: module revision found in cache: org.flywaydb#flyway-core;3.2.1
 [debug] 	found org.flywaydb#flyway-core;3.2.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.flywaydb#flyway-core;3.2.1 [compile->runtime]
@@ -243,7 +243,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.flywaydb#flyway-core;3.2.1 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.github.t3hnar#scala-bcrypt_2.11;3.0 [compile->default(compile)]
 [info] Resolving com.github.t3hnar#scala-bcrypt_2.11;3.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@13cfdae6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1767591f
 [debug] sbt-chain: module revision found in cache: com.github.t3hnar#scala-bcrypt_2.11;3.0
 [debug] 	found com.github.t3hnar#scala-bcrypt_2.11;3.0 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.github.t3hnar#scala-bcrypt_2.11;3.0 [compile->runtime]
@@ -251,7 +251,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->com.github.t3hnar#scala-bcrypt_2.11;3.0 [compile->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->de.svenkubiak#jBCrypt;0.4.1 [compile->default(compile)]
 [info] Resolving de.svenkubiak#jBCrypt;0.4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@e73dc57
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@481058ad
 [debug] sbt-chain: module revision found in cache: de.svenkubiak#jBCrypt;0.4.1
 [debug] 	found de.svenkubiak#jBCrypt;0.4.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->de.svenkubiak#jBCrypt;0.4.1 [compile->runtime]
@@ -886,7 +886,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->de.svenkubiak#jBCrypt;0.4.1 [test->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalatest#scalatest_2.11;3.0.1 [test->default(compile)]
 [info] Resolving org.scalatest#scalatest_2.11;3.0.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f21cd5e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5e0ca55
 [debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.11;3.0.1
 [debug] 	found org.scalatest#scalatest_2.11;3.0.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalatest#scalatest_2.11;3.0.1 [test->runtime]
@@ -894,7 +894,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalatest#scalatest_2.11;3.0.1 [test->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalactic#scalactic_2.11;3.0.1 [test->default(compile)]
 [info] Resolving org.scalactic#scalactic_2.11;3.0.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@21637fa7
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@721dd4e6
 [debug] sbt-chain: module revision found in cache: org.scalactic#scalactic_2.11;3.0.1
 [debug] 	found org.scalactic#scalactic_2.11;3.0.1 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalactic#scalactic_2.11;3.0.1 [test->runtime]
@@ -902,7 +902,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scalactic#scalactic_2.11;3.0.1 [test->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.8 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.11.8 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7dcd62f2
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@17a67135
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.8
 [debug] 	found org.scala-lang#scala-reflect;2.11.8 in sbt-chain
 [debug] 	[2.11.8] org.scala-lang#scala-reflect;2.11.8
@@ -911,7 +911,7 @@
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang#scala-reflect;2.11.8 [test->master]
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.5 [test->default(compile)]
 [info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6354f59d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@511bd2d9
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.5
 [debug] 	found org.scala-lang.modules#scala-xml_2.11;1.0.5 in sbt-chain
 [debug] == resolving dependencies default#akkahttpbookstore$sources_2.11;1.0->org.scala-lang.modules#scala-xml_2.11;1.0.5 [test->runtime]
@@ -2207,7 +2207,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.8!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)
-[debug] :: resolution report :: resolve 1882ms :: artifacts dl 64ms
+[debug] :: resolution report :: resolve 2564ms :: artifacts dl 131ms
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 compile produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-compile.xml
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 runtime produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-runtime.xml
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 test produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-test.xml
@@ -2221,4 +2221,4 @@
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 docs produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-docs.xml
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 pom produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-pom.xml
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 scala-tool produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-scala-tool.xml
-[debug] 	resolve done (1882ms resolve - 64ms download)
+[debug] 	resolve done (2564ms resolve - 131ms download)

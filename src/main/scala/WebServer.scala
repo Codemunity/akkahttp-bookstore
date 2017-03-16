@@ -1,7 +1,7 @@
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import repository.{BookRepository, CategoryRepository}
+import repository.{BookRepository, CategoryRepository, UserRepository}
 import services._
 
 import scala.concurrent.ExecutionContext
@@ -23,8 +23,10 @@ object WebServer extends App
 
   val categoryRepository = new CategoryRepository(databaseService)
   val bookRepository = new BookRepository(databaseService)
+  val userRepository = new UserRepository(databaseService)
 
-  val apiService = new ApiService(categoryRepository, bookRepository)
+  val tokenService = new TokenService(userRepository)
+  val apiService = new ApiService(categoryRepository, bookRepository, tokenService)
 
   val bindingFuture = Http().bindAndHandle(apiService.routes, httpHost, httpPort)
 

@@ -1,11 +1,12 @@
 import akka.http.scaladsl.model.StatusCodes
+import akka.http.scaladsl.server.MissingHeaderRejection
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import controllers.BookController
 import helpers.BookSpecHelper
-import models.{Book, BookJson}
+import models.{Book, BookJson, BookSearch, User}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{BookRepository, CategoryRepository}
-import services.{ConfigService, FlywayService, PostgresService}
+import repository.{BookRepository, CategoryRepository, UserRepository}
+import services.{ConfigService, FlywayService, PostgresService, TokenService}
 
 
 class BookEndpointSpec extends AsyncWordSpec
@@ -30,7 +31,9 @@ class BookEndpointSpec extends AsyncWordSpec
 
   val bookSpecHelper = new BookSpecHelper(categoryRepository)(bookRepository)
 
-  val bookController = new BookController(bookRepository)
+  val userRepository = new UserRepository(databaseService)
+  val tokenService = new TokenService(userRepository)
+  val bookController = new BookController(bookRepository, tokenService)
 
   // SETUP AND TEAR DOWN
 
@@ -76,6 +79,55 @@ class BookEndpointSpec extends AsyncWordSpec
 
         books must have size 2
       }
+    }
+
+    "reject the request when there is no token in the request" in {
+      Get("/books/123123") ~> bookController.routes ~> check {
+        // We assert that the rejection should be about the missing header "Authorization"
+        rejection mustBe MissingHeaderRejection("Authorization")
+      }
+    }
+
+    "return `Unauthorized` when there is an invalid token in the request" in {
+      // A sample user
+      val invalidUser = User(Some(123123), "Name", "Email", "password")
+      // Create the token without persisting the user
+      val invalidToken = tokenService.createToken(invalidUser)
+
+      // Add the Authorization header to the request
+      Get("/books/123123") ~> addHeader("Authorization", invalidToken) ~> bookController.routes ~> check {
+        // Since the token is invalid, we expect it to be completed with the "Unauthorized
+        status mustBe StatusCodes.Unauthorized
+      }
+    }
+
+    "return the book information when the token is valid" in {
+      def assertion(token: String, bookId: Long) = {
+        Get(s"/books/$bookId") ~> addHeader("Authorization", token) ~> bookController.routes ~> check {
+
+          // Parse the response as a book
+          val book = responseAs[Book]
+          // Assert we receive the expected book
+          book.title mustBe "Akka in Action"
+          book.author mustBe "Raymond Roestenburg, Rob Bakker, and Rob Williams"
+        }
+      }
+
+      // Sample user
+      val user = User(None, "Name", "test@test.com", "password")
+      // Our search, to get one book
+      val bookSearch = BookSearch(Some("Akka in Action"))
+
+      for {
+        // Store the sample user
+        storedUser <- userRepository.create(user)
+        // Search for the expected book
+        books <- bookRepository.search(bookSearch)
+        // Perform the assertion using the token with a stored user and the expected book
+        result <- assertion(tokenService.createToken(storedUser), books.head.id.get)
+        // Delete the stored user for clean up
+        _ <- userRepository.delete(storedUser.id.get)
+      } yield result
     }
 
     "create a book" in {
