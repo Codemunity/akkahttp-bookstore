@@ -14,7 +14,7 @@ import services.TokenService
 import scala.concurrent.{ExecutionContext, ExecutionException}
 
 
-class BookController(val bookRepository: BookRepository, val tokenService: TokenService)(implicit ec: ExecutionContext) extends BookJson
+class BookController(val bookRepository: BookRepository, val tokenService: TokenService)(implicit val ec: ExecutionContext) extends BookJson
   with PredefinedFromStringUnmarshallers
   with VerifyToken {
 
@@ -48,7 +48,7 @@ class BookController(val bookRepository: BookRepository, val tokenService: Token
         // We want to listen to paths like `/books/id` or `/books/id/`
         pathEndOrSingleSlash {
           get {
-            verifyToken(ec) { user =>
+            verifyToken { user =>
               complete {
                 bookRepository.findById(id)
               }

@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170315155242"/>
+		date="20170327012316"/>
 	<dependencies>
 		<module organisation="com.github.t3hnar" name="scala-bcrypt_2.11">
 			<revision name="3.0" status="release" pubdate="20161102160318" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/t3hnar/scala-bcrypt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="29">

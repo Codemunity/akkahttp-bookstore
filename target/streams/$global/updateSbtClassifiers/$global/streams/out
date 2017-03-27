@@ -33,6 +33,7 @@
 [debug] == resolving dependencies org.scala-sbt#main;0.13.8->org.scala-sbt#actions;0.13.8 [compile->default(compile)]
 [info] Resolving org.scala-sbt#actions;0.13.8 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#actions;0.13.8 {compile=[default(compile)]}
+[debug] no default cache defined: set to /Users/mlopezva/.ivy2/cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#actions;0.13.8
 [debug] 	found org.scala-sbt#actions;0.13.8 in sbt-chain
 [debug] == resolving dependencies org.scala-sbt#actions;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
@@ -703,9 +704,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 826ms :: artifacts dl 46ms
+[debug] :: resolution report :: resolve 725ms :: artifacts dl 21ms
 [debug] 	report for default#akkahttpbookstore$sbt_2.11;1.0 default produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sbt_2.11-default.xml
-[debug] 	resolve done (826ms resolve - 46ms download)
+[debug] 	resolve done (725ms resolve - 21ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#akkahttpbookstore$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1069,6 +1070,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 137ms :: artifacts dl 46ms
+[debug] :: resolution report :: resolve 152ms :: artifacts dl 42ms
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 default produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-default.xml
-[debug] 	resolve done (137ms resolve - 46ms download)
+[debug] 	resolve done (152ms resolve - 42ms download)

@@ -2,10 +2,18 @@ package controllers
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
-import models.{Category, CategoryJson, User, UserJson}
-import repository.{CategoryRepository, UserRepository}
+import directives.VerifyToken
+import models.{User, UserJson}
+import repository.UserRepository
+import services.TokenService
 
-class UserController(val userRepository: UserRepository) extends UserJson {
+import scala.concurrent.ExecutionContext
+
+// Add a `TokenService` and an implicit `ExecutionContext` to comply with our `VerifyToken` trait
+class UserController(val userRepository: UserRepository, val tokenService: TokenService)(implicit val ec: ExecutionContext)
+  extends UserJson
+  // Add the `VerifyToken` trait
+  with VerifyToken {
 
   val routes = pathPrefix("users") {
     pathEndOrSingleSlash {
@@ -22,14 +30,14 @@ class UserController(val userRepository: UserRepository) extends UserJson {
     }  ~
       pathPrefix(IntNumber) { id =>
         pathEndOrSingleSlash {
-          get {
-            onSuccess(userRepository.findById(id)) {
-              case Some(user) => complete(user)
-              case _ => complete(StatusCodes.NotFound)
+          // Add our directive for security
+          verifyTokenUser(id) { user =>
+            get {
+              // Up to this point we know the user provided by `verifyTokenUser` exists, so we just return it
+              complete(user)
             }
           }
         }
       }
   }
-
 }

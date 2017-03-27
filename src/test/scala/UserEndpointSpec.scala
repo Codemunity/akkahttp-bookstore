@@ -5,7 +5,7 @@ import helpers.CategorySpecHelper
 import models.{Category, CategoryJson, User, UserJson}
 import org.scalatest.{Assertion, AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.{CategoryRepository, UserRepository}
-import services.{ConfigService, FlywayService, PostgresService}
+import services.{ConfigService, FlywayService, PostgresService, TokenService}
 
 import scala.concurrent.Future
 
@@ -26,7 +26,8 @@ class UserEndpointSpec extends AsyncWordSpec
 
   val userRepository = new UserRepository(databaseService)
 
-  val userController = new UserController(userRepository)
+  val tokenService = new TokenService(userRepository)
+  val userController = new UserController(userRepository, tokenService)
 
   val user = User(None, "Name", "email", "password")
 
@@ -74,15 +75,23 @@ class UserEndpointSpec extends AsyncWordSpec
       } yield result
     }
 
-    "return NotFound when no user is found by id" in {
-      Get("/users/10/") ~> userController.routes ~> check {
-        status mustBe StatusCodes.NotFound
+    "return Unauthorized when no user is found by id" in {
+      // A sample user
+      val invalidUser = User(Some(123123), "Name", "Email", "password")
+      // Create the token without persisting the user
+      val invalidToken = tokenService.createToken(invalidUser)
+
+      Get("/users/10/") ~> addHeader("Authorization", invalidToken) ~> userController.routes ~> check {
+        status mustBe StatusCodes.Unauthorized
       }
     }
 
     "return the user data when it is found by id" in {
       def assert(user: User): Future[Assertion] = {
-        Get(s"/users/${user.id.get}") ~> userController.routes ~> check {
+        // Create a token with the same user as the one requested
+        val token = tokenService.createToken(user)
+
+        Get(s"/users/${user.id.get}") ~> addHeader("Authorization", token) ~> userController.routes ~> check {
           status mustBe StatusCodes.OK
 
           val foundUser = responseAs[User]
@@ -94,6 +103,26 @@ class UserEndpointSpec extends AsyncWordSpec
         u <- userRepository.create(user)
         result <- assert(u)
         _ <- userRepository.delete(u.id.get)
+      } yield result
+    }
+
+    "return Unauthorized when the user requested is not the same in the token" in {
+      def assert(user: User, token: String): Future[Assertion] = {
+
+        Get(s"/users/${user.id.get}") ~> addHeader("Authorization", token) ~> userController.routes ~> check {
+          status mustBe StatusCodes.Unauthorized
+        }
+      }
+
+      val user2 = User(None, "Name2", "email2", "password2")
+
+      for {
+        u <- userRepository.create(user)
+        u2 <- userRepository.create(user2)
+        // Create a token with our second user
+        result <- assert(u, tokenService.createToken(u2))
+        _ <- userRepository.delete(u.id.get)
+        _ <- userRepository.delete(u2.id.get)
       } yield result
     }
 
