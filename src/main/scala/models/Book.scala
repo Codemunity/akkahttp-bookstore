@@ -13,6 +13,8 @@ case class Book(
                  releaseDate: Date,
                  categoryId: Long,
                  quantity: Int,
+                // CHANGE1: Add the price attribute
+                 price: Double,
                  author: String
                )
 
@@ -20,7 +22,8 @@ case class Book(
 trait BookJson extends SprayJsonSupport with DefaultJsonProtocol {
   import services.FormatService._
 
-  implicit val bookFormat = jsonFormat6(Book.apply)
+  // CHANGE2: use `jsonFormat7` instead of `jsonFormat6`
+  implicit val bookFormat = jsonFormat7(Book.apply)
 
 }
 
@@ -33,9 +36,12 @@ trait BookTable {
     def releaseDate = column[Date]("release_date")
     def categoryId = column[Long]("category_id")
     def quantity = column[Int]("quantity")
+    // CHANGE3: Create the `price` column
+    def price = column[Double]("price_usd")
     def author = column[String]("author")
 
-    def * = (id, title, releaseDate, categoryId, quantity, author) <> ((Book.apply _).tupled, Book.unapply)
+    // CHANGE4: Pass the `price` to the apply function
+    def * = (id, title, releaseDate, categoryId, quantity, price, author) <> ((Book.apply _).tupled, Book.unapply)
   }
 
 

@@ -55,8 +55,9 @@ class BookSpecHelper(categoryRepository: CategoryRepository)(bookRepository: Boo
     }
   }
 
-  def book(categoryId: Long, title: String = "Murder in Ganymede", releaseDate: Date = Date.valueOf("1998-01-20"), author: String = "John Doe") =
-    Book(None, title, releaseDate, categoryId, 3, author)
+  def book(categoryId: Long, title: String = "Murder in Ganymede", releaseDate: Date = Date.valueOf("1998-01-20"),
+           author: String = "John Doe", price: Double = 10.0) =
+    Book(None, title, releaseDate, categoryId, 3, price, author)
 
   // Helper function to create a category,then a book, perform some assertions to it, and then delete them both.
   def createAndDelete[T]()(assertion: Book => Future[T]): Future[T] = {

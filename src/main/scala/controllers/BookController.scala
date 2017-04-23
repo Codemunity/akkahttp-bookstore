@@ -30,6 +30,7 @@ class BookController(val bookRepository: BookRepository, val tokenService: Token
         decodeRequest {
           // Parses the request as the given entity, in this case a `Book`
           entity(as[Book]) { book =>
+            println(s"BOOK: $book")
             complete(StatusCodes.Created, bookRepository.create(book))
           }
         }
