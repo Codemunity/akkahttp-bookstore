@@ -1,8 +1,10 @@
 package services
 
+import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpResponse}
 import repository.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 import akka.http.scaladsl.server.Directives._
 import controllers.{AuthController, BookController, CategoryController, UserController}
+import views.BookSearchView
 
 import scala.concurrent.ExecutionContext
 
@@ -21,6 +23,18 @@ class ApiService(
   val userController = new UserController(userRepository, tokenService)
 
   def routes =
+    // Add a new route
+    pathPrefix("books") {
+      pathEndOrSingleSlash {
+        get {
+          complete {
+            HttpResponse(entity = HttpEntity(
+              ContentTypes.`text/html(UTF-8)`,
+              BookSearchView.view))
+          }
+        }
+      }
+    } ~
     pathPrefix("api") {
       categoryController.routes ~
       bookController.routes ~
