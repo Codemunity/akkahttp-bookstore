@@ -11,7 +11,7 @@ import models.{Book, BookJson, BookSearch}
 import repository.BookRepository
 import services.TokenService
 
-import scala.concurrent.{ExecutionContext, ExecutionException}
+import scala.concurrent.ExecutionContext
 
 
 class BookController(val bookRepository: BookRepository, val tokenService: TokenService)(implicit val ec: ExecutionContext) extends BookJson
