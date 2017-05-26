@@ -1,12 +1,14 @@
 package views
 
 import models.{Book, Category}
+import services.CurrencyService
 
+import scalatags.Text
 import scalatags.Text.all._
 
 object BookSearchView {
 
-  def view(categories: Seq[Category], currencies: Seq[String], books: Seq[Book]) = html(
+  def view(categories: Seq[Category], currencies: Seq[String], books: Seq[Book], currentCurrency: String = CurrencyService.baseCurrency) = html(
     head(
 
     ),
@@ -20,15 +22,18 @@ object BookSearchView {
           option,
           categories.map(c => option(value:=c.id.get)(c.title)))
         ),
-        p(select(name:="currency")(currencies.map(c => option(c)))),
+        p(select(name:="currency")(currencies.map(c => option(if (c == currentCurrency) selected else List.empty[Text.Modifier])(c)))),
         p(input(`type`:="submit", value:="Submit"))
       ),
       ul(
-        books.map(b => li(p(s"${b.title} - ${formatPrice(b.price)}")))
+        books.map(b => li(p(s"${b.title} - ${formatPrice(currentCurrency, b.price)}")))
       )
     )
   ).toString()
 
-  def formatPrice(price: Double): String = "$%.2f".format(price)
+  def formatPrice(currency: String, price: Double): String = {
+    val symbol = CurrencyService.currencySymbols.getOrElse(currency, "$")
+    s"$symbol%.2f".format(price)
+  }
 
 }

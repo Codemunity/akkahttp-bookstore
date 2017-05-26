@@ -29,6 +29,8 @@ object CurrencyService {
   val supportedCurrencies = Seq("USD", "EUR")
   // The currencies that require exchange rates, we don't require our base currency
   private val exchangeCurrencies = supportedCurrencies.filterNot(_ == baseCurrency)
+  // A map with currencies and their symbols
+  val currencySymbols = Map("USD" -> "$", "EUR" -> "€")
   // The url built using the previous values
   private val requestUrl = s"http://api.fixer.io/latest?base=$baseCurrency&symbols=${exchangeCurrencies.mkString(",")}"
   // The request won't be executed right away, think of it as a blueprint

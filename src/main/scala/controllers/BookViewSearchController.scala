@@ -53,14 +53,14 @@ class BookViewSearchController(val categoryRepository: CategoryRepository, val b
                 // Otherwise we will use the default one
                 else bookSearchQuery
 
-                respondWithView(booksFuture)
+                respondWithView(booksFuture, currency)
               }
           }
         }
       }
   }
 
-  def respondWithView(booksFuture: Future[Seq[Book]]): Future[HttpResponse] = {
+  def respondWithView(booksFuture: Future[Seq[Book]], currentCurrency: String = CurrencyService.baseCurrency): Future[HttpResponse] = {
     for {
       categories <- categoryRepository.all
       books <- booksFuture
@@ -68,7 +68,7 @@ class BookViewSearchController(val categoryRepository: CategoryRepository, val b
       val currencies = CurrencyService.supportedCurrencies
       HttpResponse(entity = HttpEntity(
         ContentTypes.`text/html(UTF-8)`,
-        BookSearchView.view(categories, currencies, books)))
+        BookSearchView.view(categories, currencies, books, currentCurrency)))
     }
   }
 
