@@ -24,9 +24,11 @@ object BookSearchView {
         p(input(`type`:="submit", value:="Submit"))
       ),
       ul(
-        books.map(b => li(p(b.title)))
+        books.map(b => li(p(s"${b.title} - ${formatPrice(b.price)}")))
       )
     )
   ).toString()
+
+  def formatPrice(price: Double): String = "$%.2f".format(price)
 
 }

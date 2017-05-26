@@ -1,7 +1,9 @@
 package services
 
+import akka.actor.ActorSystem
 import repository.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 import akka.http.scaladsl.server.Directives._
+import akka.stream.Materializer
 import controllers._
 
 import scala.concurrent.ExecutionContext
@@ -13,7 +15,7 @@ class ApiService(
                   authRepository: AuthRepository,
                   userRepository: UserRepository,
                   tokenService: TokenService
-                )(implicit executor: ExecutionContext) {
+                )(implicit executor: ExecutionContext, as: ActorSystem, mat: Materializer) {
 
   val categoryController = new CategoryController(categoryRepository)
   val bookController = new BookController(bookRepository, tokenService)
