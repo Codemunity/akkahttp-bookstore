@@ -8,12 +8,13 @@ import scalatags.Text.all._
 
 object BookSearchView {
 
-  def view(categories: Seq[Category], currencies: Seq[String], books: Seq[Book], currentCurrency: String = CurrencyService.baseCurrency) = html(
+  def view(categories: Seq[Category], currencies: Seq[String], books: Seq[Book], errors: List[String] = List(), currentCurrency: String = CurrencyService.baseCurrency) = html(
     head(
 
     ),
     body(
       h1("Search our Inmense Catalog!"),
+      ul(errors.map(e => li(p(e)))),
       form(action:="/books", method:="POST")(
         p(input(name:="title", placeholder:="Title")),
         p(input(name:="releaseDate", placeholder:="Release Date")),
