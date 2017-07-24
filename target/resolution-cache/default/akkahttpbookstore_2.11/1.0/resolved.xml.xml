@@ -4,7 +4,7 @@
 		module="akkahttpbookstore_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20170514214539"
+		publication="20170724120835"
 	>
 		<description>
 		AkkaHTTPBookstore
@@ -34,11 +34,10 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-stream_2.11" rev="2.4.7" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-core_2.11" rev="2.4.7" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-experimental_2.11" rev="2.4.7" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-spray-json-experimental_2.11" rev="2.4.7" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.akka" name="akka-http-testkit_2.11" rev="2.4.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-stream_2.11" rev="2.5.3" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http_2.11" rev="10.0.9" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http-testkit_2.11" rev="10.0.9" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-http-spray-json_2.11" rev="10.0.9" conf="compile->default(compile)"/>
 		<dependency org="com.pauldijou" name="jwt-core_2.11" rev="0.8.0" conf="compile->default(compile)"/>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="3.0.1" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.slick" name="slick_2.11" rev="3.1.1" conf="compile->default(compile)"/>
