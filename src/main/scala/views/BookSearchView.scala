@@ -26,9 +26,11 @@ object BookSearchView {
         p(select(name:="currency")(currencies.map(c => option(if (c == currentCurrency) selected else List.empty[Text.Modifier])(c)))),
         p(input(`type`:="submit", value:="Submit"))
       ),
-      ul(
-        books.map(b => li(p(s"${b.title} - ${formatPrice(currentCurrency, b.price)}")))
-      )
+      if (books.isEmpty) p("No books were found that matched your criteria.")
+      else
+        ul(
+          books.map(b => li(p(s"${b.title} - ${formatPrice(currentCurrency, b.price)}")))
+        )
     )
   ).toString()
 
