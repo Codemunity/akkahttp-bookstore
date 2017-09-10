@@ -704,9 +704,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 563ms :: artifacts dl 45ms
+[debug] :: resolution report :: resolve 312ms :: artifacts dl 18ms
 [debug] 	report for default#akkahttpbookstore$sbt_2.11;1.0 default produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sbt_2.11-default.xml
-[debug] 	resolve done (563ms resolve - 45ms download)
+[debug] 	resolve done (312ms resolve - 18ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#akkahttpbookstore$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1070,6 +1070,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 110ms :: artifacts dl 29ms
+[debug] :: resolution report :: resolve 87ms :: artifacts dl 12ms
 [debug] 	report for default#akkahttpbookstore$sources_2.11;1.0 default produced in /Users/mlopezva/Documents/scala-projects/AkkaHTTPBookstore/target/resolution-cache/reports/default-akkahttpbookstore$sources_2.11-default.xml
-[debug] 	resolve done (110ms resolve - 29ms download)
+[debug] 	resolve done (87ms resolve - 12ms download)
