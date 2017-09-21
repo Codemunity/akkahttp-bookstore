@@ -4,7 +4,7 @@
 		module="akkahttpbookstore$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161129003143"
+		publication="20170910172925"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
