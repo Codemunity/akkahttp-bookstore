@@ -1,13 +1,9 @@
 package repositories
 
 import helpers.CategorySpecHelper
-import models.Category
-import org.scalatest.{Assertion, AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
+import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.CategoryRepository
 import services.{ConfigService, FlywayService, PostgresService}
-// We import the global execution context for our database service
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
 
 // We use AyncWordSpec to be able to test Future[Assertion]: http://www.scalatest.org/user_guide/async_testing
 class CategoryRepositorySpec extends AsyncWordSpec
