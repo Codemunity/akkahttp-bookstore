@@ -4,6 +4,8 @@ version := "1.0"
 
 scalaVersion := "2.12.6"
 
+parallelExecution in Test := false
+
 val akkaVersion = "2.5.14"
 val akkaHttpVersion = "10.1.4"
 
