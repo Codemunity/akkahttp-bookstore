@@ -6,7 +6,7 @@ import controllers.UserController
 import models.{User, UserJson}
 import org.scalatest.{Assertion, AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.UserRepository
-import services.{ConfigService, FlywayService, PostgresService}
+import services.{ConfigService, FlywayService, PostgresService, TokenService}
 
 class UserEndpointSpec extends AsyncWordSpec
   with MustMatchers
