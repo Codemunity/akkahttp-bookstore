@@ -6,8 +6,6 @@ import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
 import repository.{AuthRepository, UserRepository}
 import services.{ConfigService, FlywayService, PostgresService}
 
-import scala.concurrent.ExecutionContext.Implicits.global
-
 class AuthRepositorySpec extends AsyncWordSpec
   with MustMatchers
   with BeforeAndAfterAll
