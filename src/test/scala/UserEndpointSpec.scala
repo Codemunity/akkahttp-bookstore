@@ -1,13 +1,12 @@
+import scala.concurrent.Future
+
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.testkit.ScalatestRouteTest
-import controllers.{CategoryController, UserController}
-import helpers.CategorySpecHelper
-import models.{Category, CategoryJson, User, UserJson}
+import controllers.UserController
+import models.{User, UserJson}
 import org.scalatest.{Assertion, AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{CategoryRepository, UserRepository}
-import services.{ConfigService, FlywayService, PostgresService, TokenService}
-
-import scala.concurrent.Future
+import repository.UserRepository
+import services.{ConfigService, FlywayService, PostgresService}
 
 class UserEndpointSpec extends AsyncWordSpec
   with MustMatchers
