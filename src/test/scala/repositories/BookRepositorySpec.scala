@@ -2,7 +2,6 @@ package repositories
 
 import helpers.BookSpecHelper
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{BookRepository, CategoryRepository}
 import services.{ConfigService, FlywayService, PostgresService}
 
 
@@ -37,6 +36,7 @@ class BookRepositorySpec extends AsyncWordSpec
   }
 
   override def afterAll {
+    bookRepository.close
 
     // Let's make sure our schema is dropped
     flywayService.dropDatabase

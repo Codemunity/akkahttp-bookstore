@@ -5,7 +5,6 @@ import java.sql.Date
 import helpers.BookSpecHelper
 import models.BookSearch
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{BookRepository, CategoryRepository}
 import services.{ConfigService, FlywayService, PostgresService}
 
 
