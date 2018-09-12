@@ -5,7 +5,7 @@ import services._
 import scala.concurrent.ExecutionContext
 import scala.io.StdIn
 
-import repositories.{BookRepository, CategoryRepository}
+import repositories.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 
 object WebServer extends App
   with ConfigService

@@ -5,8 +5,8 @@ import controllers.BookController
 import helpers.BookSpecHelper
 import models.{Book, BookJson, BookSearch, User}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repositories.{BookRepository, CategoryRepository}
-import services.{ConfigService, FlywayService, PostgresService}
+import repositories.{BookRepository, CategoryRepository, UserRepository}
+import services.{ConfigService, FlywayService, PostgresService, TokenService}
 
 
 class BookEndpointSpec extends AsyncWordSpec

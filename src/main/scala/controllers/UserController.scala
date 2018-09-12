@@ -4,8 +4,10 @@ import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import models.{User, UserJson}
 import repositories.UserRepository
-
 import scala.concurrent.ExecutionContext
+
+import directives.VerifyToken
+import services.TokenService
 
 // Add a `TokenService` and an implicit `ExecutionContext` to comply with our `VerifyToken` trait
 class UserController(val userRepository: UserRepository, val tokenService: TokenService)(implicit val ec: ExecutionContext)
