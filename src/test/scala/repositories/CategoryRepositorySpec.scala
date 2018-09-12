@@ -2,7 +2,6 @@ package repositories
 
 import helpers.CategorySpecHelper
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.CategoryRepository
 import services.{ConfigService, FlywayService, PostgresService}
 
 // We use AyncWordSpec to be able to test Future[Assertion]: http://www.scalatest.org/user_guide/async_testing

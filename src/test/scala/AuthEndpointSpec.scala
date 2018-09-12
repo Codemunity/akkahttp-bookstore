@@ -1,12 +1,12 @@
+import scala.concurrent.Future
+
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import controllers.AuthController
 import models._
 import org.scalatest._
-import repository.{AuthRepository, UserRepository}
+import repositories.{AuthRepository, UserRepository}
 import services.{ConfigService, FlywayService, PostgresService, TokenService}
-
-import scala.concurrent.Future
 
 
 class AuthEndpointSpec extends AsyncWordSpec

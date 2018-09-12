@@ -3,7 +3,6 @@ package repositories
 import com.github.t3hnar.bcrypt._
 import models.{Credentials, User}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{AuthRepository, UserRepository}
 import services.{ConfigService, FlywayService, PostgresService}
 
 class AuthRepositorySpec extends AsyncWordSpec

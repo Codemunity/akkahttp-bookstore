@@ -1,12 +1,12 @@
 package services
 
+import scala.concurrent.ExecutionContext
+
 import akka.actor.ActorSystem
-import repository.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 import akka.http.scaladsl.server.Directives._
 import akka.stream.Materializer
 import controllers._
-
-import scala.concurrent.ExecutionContext
+import repositories.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 
 
 class ApiService(
