@@ -3,7 +3,7 @@ package controllers
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
 import models.{Auth, AuthJson, Credentials, CredentialsJson}
-import repository.AuthRepository
+import repositories.AuthRepository
 import services.TokenService
 
 class AuthController(val authRepository: AuthRepository, val tokenService: TokenService) extends CredentialsJson
