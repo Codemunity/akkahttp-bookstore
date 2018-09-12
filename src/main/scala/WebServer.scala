@@ -1,11 +1,11 @@
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import repository.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 import services._
-
 import scala.concurrent.ExecutionContext
 import scala.io.StdIn
+
+import repositories.{BookRepository, CategoryRepository}
 
 object WebServer extends App
   with ConfigService

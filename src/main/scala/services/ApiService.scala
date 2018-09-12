@@ -1,10 +1,10 @@
 package services
 
-import repository.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
-import akka.http.scaladsl.server.Directives._
-import controllers.{AuthController, BookController, CategoryController, UserController}
-
 import scala.concurrent.ExecutionContext
+
+import akka.http.scaladsl.server.Directives._
+import controllers.{BookController, CategoryController}
+import repositories.{BookRepository, CategoryRepository}
 
 
 class ApiService(

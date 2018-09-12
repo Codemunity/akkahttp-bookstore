@@ -4,7 +4,7 @@ import akka.http.scaladsl.model.StatusCodes
 
 import akka.http.scaladsl.server.Directives._
 import models.{CategoryJson, Category}
-import repository.CategoryRepository
+import repositories.CategoryRepository
 
 class CategoryController(val categoryRepository: CategoryRepository) extends CategoryJson {
 

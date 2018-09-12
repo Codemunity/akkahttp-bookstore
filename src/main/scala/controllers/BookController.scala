@@ -8,10 +8,9 @@ import akka.http.scaladsl.unmarshalling.{PredefinedFromStringUnmarshallers, Unma
 import akka.http.scaladsl.server.PathMatchers.IntNumber
 import directives.VerifyToken
 import models.{Book, BookJson, BookSearch}
-import repository.BookRepository
-import services.TokenService
+import scala.concurrent.ExecutionException
 
-import scala.concurrent.{ExecutionContext, ExecutionException}
+import repositories.BookRepository
 
 
 class BookController(val bookRepository: BookRepository, val tokenService: TokenService)(implicit val ec: ExecutionContext) extends BookJson

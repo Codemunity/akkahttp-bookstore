@@ -2,10 +2,8 @@ package controllers
 
 import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Directives._
-import directives.VerifyToken
 import models.{User, UserJson}
-import repository.UserRepository
-import services.TokenService
+import repositories.UserRepository
 
 import scala.concurrent.ExecutionContext
 
@@ -40,4 +38,5 @@ class UserController(val userRepository: UserRepository, val tokenService: Token
         }
       }
   }
+
 }

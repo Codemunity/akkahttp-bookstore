@@ -5,8 +5,8 @@ import akka.http.scaladsl.testkit.ScalatestRouteTest
 import controllers.UserController
 import models.{User, UserJson}
 import org.scalatest.{Assertion, AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.UserRepository
-import services.{ConfigService, FlywayService, PostgresService, TokenService}
+import repositories.UserRepository
+import services.{ConfigService, FlywayService, PostgresService}
 
 class UserEndpointSpec extends AsyncWordSpec
   with MustMatchers

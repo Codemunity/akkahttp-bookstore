@@ -1,10 +1,10 @@
-package repository
-
-import models._
-import services.DatabaseService
+package repositories
 
 import scala.concurrent.{ExecutionContext, Future}
+
 import com.github.t3hnar.bcrypt._
+import models._
+import services.DatabaseService
 
 
 class UserRepository(val databaseService: DatabaseService)(implicit executor: ExecutionContext) extends UserTable {
