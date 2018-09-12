@@ -7,9 +7,9 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.unmarshalling.{PredefinedFromStringUnmarshallers, Unmarshaller}
 import akka.http.scaladsl.server.PathMatchers.IntNumber
 import models.{Book, BookJson, BookSearch}
-import repository.BookRepository
-
 import scala.concurrent.ExecutionException
+
+import repositories.BookRepository
 
 
 class BookController(val bookRepository: BookRepository) extends BookJson with PredefinedFromStringUnmarshallers {

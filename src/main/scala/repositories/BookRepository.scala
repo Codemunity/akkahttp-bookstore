@@ -1,10 +1,9 @@
-package repository
+package repositories
 
+import scala.concurrent.{ExecutionContext, Future}
 
 import models._
 import services.DatabaseService
-
-import scala.concurrent.{ExecutionContext, Future}
 
 
 class BookRepository (val databaseService: DatabaseService)(implicit executor: ExecutionContext) extends BookTable {

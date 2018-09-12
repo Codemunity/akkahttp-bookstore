@@ -2,11 +2,11 @@ package helpers
 
 import java.sql.Date
 
+import scala.concurrent.{ExecutionContext, Future}
+
 import models.{Book, Category}
 import org.scalatest._
-import repository.{BookRepository, CategoryRepository}
-
-import scala.concurrent.{ExecutionContext, Future}
+import repositories.{BookRepository, CategoryRepository}
 
 
 class BookSpecHelper(categoryRepository: CategoryRepository)(bookRepository: BookRepository)(implicit executor: ExecutionContext) {

@@ -2,7 +2,6 @@ package repositories
 
 import helpers.CategorySpecHelper
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repositories.CategoryRepository
 import services.{ConfigService, FlywayService, PostgresService}
 
 // We use AyncWordSpec to be able to test Future[Assertion]: http://www.scalatest.org/user_guide/async_testing
@@ -34,7 +33,6 @@ class CategoryRepositorySpec extends AsyncWordSpec
   }
 
   override def afterAll {
-    categoryRepository.close
     // Let's make sure our schema is dropped
     flywayService.dropDatabase
   }

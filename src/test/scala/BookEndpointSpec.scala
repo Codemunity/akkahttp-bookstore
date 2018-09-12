@@ -4,7 +4,7 @@ import controllers.BookController
 import helpers.BookSpecHelper
 import models.{Book, BookJson}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{BookRepository, CategoryRepository}
+import repositories.{BookRepository, CategoryRepository}
 import services.{ConfigService, FlywayService, PostgresService}
 
 
@@ -43,7 +43,6 @@ class BookEndpointSpec extends AsyncWordSpec
 
   override def afterAll {
     bookSpecHelper.bulkDelete.map { _ =>
-      categoryRepository.close
       bookRepository.close
     }
 
