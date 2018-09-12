@@ -4,7 +4,7 @@ import controllers.CategoryController
 import helpers.CategorySpecHelper
 import models.{Category, CategoryJson}
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.CategoryRepository
+import repositories.CategoryRepository
 import services.{ConfigService, FlywayService, PostgresService}
 
 class CategoryEndpointSpec extends AsyncWordSpec

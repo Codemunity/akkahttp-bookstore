@@ -1,7 +1,8 @@
 package helpers
 
 import models.Category
-import repository.CategoryRepository
+import org.scalatest._
+import repositories.CategoryRepository
 
 import scala.concurrent.{ExecutionContext, Future}
 
