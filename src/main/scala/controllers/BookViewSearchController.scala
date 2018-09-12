@@ -2,17 +2,17 @@ package controllers
 
 import java.sql.Date
 
+import scala.concurrent.{ExecutionContext, Future}
+import scala.util.{Failure, Success, Try}
+
 import akka.actor.ActorSystem
 import akka.http.scaladsl.model.{ContentTypes, HttpEntity, HttpResponse}
 import akka.http.scaladsl.server.Directives._
 import akka.stream.Materializer
 import models.{Book, BookSearch, BookSearchJson}
-import repository.{BookRepository, CategoryRepository}
+import repositories.{BookRepository, CategoryRepository}
 import services.CurrencyService
 import views.BookSearchView
-
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success, Try}
 
 
 class BookViewSearchController(val categoryRepository: CategoryRepository, val bookRepository: BookRepository)(implicit val ec: ExecutionContext, as: ActorSystem, mat: Materializer) extends BookSearchJson {

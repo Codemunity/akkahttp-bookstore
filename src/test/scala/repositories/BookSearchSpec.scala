@@ -3,13 +3,9 @@ package repositories
 import java.sql.Date
 
 import helpers.BookSpecHelper
-import models.{BookSearch, Category}
+import models.BookSearch
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.{BookRepository, CategoryRepository}
 import services.{ConfigService, FlywayService, PostgresService}
-
-import scala.concurrent.duration._
-import scala.concurrent.{Await, Future}
 
 
 class BookSearchSpec extends AsyncWordSpec

@@ -1,12 +1,10 @@
 package repositories
 
 
+import com.github.t3hnar.bcrypt._
 import models.User
 import org.scalatest.{AsyncWordSpec, BeforeAndAfterAll, MustMatchers}
-import repository.UserRepository
 import services.{ConfigService, FlywayService, PostgresService}
-import scala.concurrent.ExecutionContext.Implicits.global
-import com.github.t3hnar.bcrypt._
 
 class UserRepositorySpec extends AsyncWordSpec
   with MustMatchers

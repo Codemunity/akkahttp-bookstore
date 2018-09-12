@@ -1,12 +1,12 @@
 package services
 
-import models.{User, UserJson}
-import pdi.jwt.{Jwt, JwtAlgorithm}
-import repository.UserRepository
-import spray.json._
-
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.{Failure, Success}
+
+import models.{User, UserJson}
+import pdi.jwt.{Jwt, JwtAlgorithm}
+import repositories.UserRepository
+import spray.json._
 
 class TokenService(val userRepository: UserRepository)(implicit ec: ExecutionContext) extends UserJson {
 
