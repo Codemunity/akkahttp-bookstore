@@ -2,8 +2,10 @@ package services
 
 import scala.concurrent.ExecutionContext
 
+import akka.actor.ActorSystem
 import akka.http.scaladsl.server.Directives._
-import controllers.{AuthController, BookController, CategoryController, UserController}
+import akka.stream.Materializer
+import controllers._
 import repositories.{AuthRepository, BookRepository, CategoryRepository, UserRepository}
 
 
