@@ -38,5 +38,4 @@ class ApiService(
           userController.routes ~
           orderController.routes
       }
-
 }

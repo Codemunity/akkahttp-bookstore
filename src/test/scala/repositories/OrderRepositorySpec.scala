@@ -46,7 +46,7 @@ class OrderRepositorySpec
         books <- bookSpecHelper.bulkInsert
         order = Order(None, Timestamp.from(Instant.now()), u.id.get, 10.0)
         orderWithBooks = OrderWithBooks(order, books)
-        co <-  orderRepository.createOrder(orderWithBooks)
+        co <- orderRepository.createOrder(orderWithBooks)
       } yield {
         co.id mustBe defined
       }
@@ -72,7 +72,7 @@ class OrderRepositorySpec
         books <- bookSpecHelper.bulkInsert
         order = Order(None, Timestamp.from(Instant.now()), u.id.get, 10.0)
         orderWithBooks = OrderWithBooks(order, books)
-        co <-  orderRepository.createOrder(orderWithBooks)
+        co <- orderRepository.createOrder(orderWithBooks)
         storedBooks <- orderRepository.findBooksByOrder(co.id.get)
       } yield {
         storedBooks.size mustBe books.size

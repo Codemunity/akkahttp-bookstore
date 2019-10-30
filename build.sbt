@@ -25,4 +25,3 @@ libraryDependencies ++= Seq(
   "com.github.t3hnar" %% "scala-bcrypt" % "3.1",
   "com.lihaoyi" %% "scalatags" % "0.6.7"
 )
-
